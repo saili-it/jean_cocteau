@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-800 bg-white antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary-500 text-white font-semibold rounded-full hover:bg-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40 hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-secondary-500 text-white font-semibold rounded-full hover:bg-secondary-600 transition-all duration-300 shadow-lg shadow-secondary-500/30 hover:shadow-xl hover:shadow-secondary-500/40 hover:-translate-y-0.5;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent-300 text-gray-900 font-semibold rounded-full hover:bg-accent-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary-500 text-primary-500 font-semibold rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300;
+  }
+  .btn-white {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 shadow-lg hover:-translate-y-0.5;
+  }
+  .section-title {
+    @apply text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4;
+  }
+  .section-subtitle {
+    @apply text-lg text-gray-600 max-w-2xl mx-auto;
+  }
+  .gradient-divider {
+    @apply w-20 h-1.5 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto my-6 rounded-full;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #22b8e6, #7cc242);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0e8fbb;
+}
