@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader'
 import CTASection from '../components/CTASection'
 
 const SCHOOL_IMG = '/School pictures/School pictures'
+const WA_IMG = '/School pictures'
 
 const values = [
   { icon: Heart, title: 'Bienveillance', desc: 'Un cadre rassurant où chaque élève se sent écouté, respecté et soutenu.', color: 'primary' },
@@ -33,6 +34,7 @@ export default function About() {
         title="À propos de nous"
         subtitle="Une école d'exception, une histoire d'engagement et de passion pour l'éducation."
         breadcrumbs={[{ label: 'À propos' }]}
+        image={`${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.57 (1).jpeg`}
       />
 
       {/* Histoire */}
@@ -58,7 +60,7 @@ export default function About() {
             </p>
           </div>
           <div className="relative">
-            <img src={`${SCHOOL_IMG}/IMG_2870.jpg`} alt="Campus" className="rounded-3xl shadow-2xl" />
+            <img src={`${WA_IMG}/WhatsApp Image 2026-05-10 at 22.08.10 (2).jpeg`} alt="Campus" className="rounded-3xl shadow-2xl" />
             <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary-500 to-secondary-500 text-white p-6 rounded-2xl shadow-xl">
               <div className="text-3xl font-display font-extrabold text-accent-300">2019</div>
               <div className="text-sm">Année de fondation</div>
@@ -168,9 +170,9 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Salles modernes', desc: '60 salles équipées de tableaux interactifs et matériel pédagogique de pointe.', img: `${SCHOOL_IMG}/4c5739e6-941a-412f-b55f-b6af3476b11a.JPG` },
-              { title: 'Centre sportif', desc: 'Gymnase, terrains, piscine et espaces dédiés au sport et au bien-être.', img: `${SCHOOL_IMG}/2809d8359bb7a4d95c6852c400016c2a.JPG` },
-              { title: 'Laboratoires & arts', desc: 'Laboratoires sciences, salles de musique, arts plastiques et théâtre.', img: `${SCHOOL_IMG}/6ff70d50-c633-4305-a0bb-2eb265b15ceb.JPG` },
+              { title: 'Salles modernes', desc: '60 salles équipées de tableaux interactifs et matériel pédagogique de pointe.', img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.08.08 (1).jpeg` },
+              { title: 'Centre sportif', desc: 'Gymnase, terrains, piscine et espaces dédiés au sport et au bien-être.', img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.37 (4).jpeg` },
+              { title: 'Laboratoires & arts', desc: 'Laboratoires sciences, salles de musique, arts plastiques et théâtre.', img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.58 (6).jpeg` },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
                 <div className="h-56 overflow-hidden">

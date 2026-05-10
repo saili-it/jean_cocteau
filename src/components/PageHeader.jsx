@@ -4,15 +4,26 @@ import { ChevronRight, Home } from 'lucide-react'
 export default function PageHeader({ title, subtitle, breadcrumbs = [], image }) {
   return (
     <section
-      className="relative text-white py-24 md:py-32 overflow-hidden"
-      style={{
-        backgroundImage: image
-          ? `linear-gradient(rgba(14,143,187,0.85), rgba(90,151,40,0.85)), url(${image})`
-          : 'linear-gradient(135deg, #22b8e6 0%, #7cc242 100%)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className={`relative text-white overflow-hidden ${image ? 'min-h-[70vh] md:min-h-[85vh] flex items-end py-20 md:py-28' : 'py-24 md:py-32'}`}
+      style={
+        image
+          ? undefined
+          : {
+              backgroundImage: 'linear-gradient(135deg, #22b8e6 0%, #7cc242 100%)',
+            }
+      }
     >
+      {image && (
+        <>
+          <img
+            src={image}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary-700/40 via-primary-800/55 to-primary-900/80" />
+        </>
+      )}
       {/* Decorative blobs */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-accent-300/20 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl" />

@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader'
 import CTASection from '../components/CTASection'
 
 const SCHOOL_IMG = '/School pictures/School pictures'
+const WA_IMG = '/School pictures'
 
 const cycles = [
   {
@@ -13,7 +14,7 @@ const cycles = [
     color: 'pink',
     desc: 'Un environnement sécurisant pour les premiers pas dans l\'apprentissage. Éveil sensoriel, créativité, motricité, langages.',
     bullets: ['Pédagogie active', 'Bilingue dès la PS', 'Petits effectifs', 'Activités artistiques'],
-    img: `${SCHOOL_IMG}/0cf0007c031bed1200c44af205da4e1e_kid.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.08.10 (1).jpeg`,
     to: '/cycles/maternelle',
   },
   {
@@ -23,7 +24,7 @@ const cycles = [
     color: 'primary',
     desc: 'Acquisition des fondamentaux dans un cadre stimulant. Lecture, mathématiques, sciences, langues et culture.',
     bullets: ['Programme français', 'Anglais quotidien', 'Sciences expérimentales', 'Activités sportives'],
-    img: `${SCHOOL_IMG}/4f7ac21ba46d3e1cd623264946728653.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.52.jpeg`,
     to: '/cycles/primaire',
   },
   {
@@ -33,7 +34,7 @@ const cycles = [
     color: 'secondary',
     desc: 'Approfondissement et autonomie. Développement de l\'esprit critique, projets pluridisciplinaires et orientation.',
     bullets: ['Préparation Brevet', 'Sections internationales', 'Projets innovants', 'Orientation guidée'],
-    img: `${SCHOOL_IMG}/591c94bb434fd2eadbb6247f006e0d12.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.37.jpeg`,
     to: '/cycles/college',
   },
   {

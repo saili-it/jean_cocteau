@@ -7,6 +7,7 @@ import {
 import CTASection from '../components/CTASection'
 
 const SCHOOL_IMG = '/School pictures/School pictures'
+const WA_IMG = '/School pictures'
 
 const cycles = [
   {
@@ -17,7 +18,7 @@ const cycles = [
     accent: 'bg-pink-100 text-pink-600',
     desc: 'Éveil, créativité et premières découvertes dans un environnement bienveillant.',
     to: '/cycles/maternelle',
-    img: `${SCHOOL_IMG}/0cf0007c031bed1200c44af205da4e1e_kid.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.51 (1).jpeg`,
   },
   {
     title: 'Primaire',
@@ -27,7 +28,7 @@ const cycles = [
     accent: 'bg-primary-100 text-primary-600',
     desc: 'Apprentissages fondamentaux et ouverture sur le monde et les langues.',
     to: '/cycles/primaire',
-    img: `${SCHOOL_IMG}/4f7ac21ba46d3e1cd623264946728653.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.52.jpeg`,
   },
   {
     title: 'Collège',
@@ -37,7 +38,7 @@ const cycles = [
     accent: 'bg-secondary-100 text-secondary-700',
     desc: 'Approfondissement des connaissances et développement de l\'autonomie.',
     to: '/cycles/college',
-    img: `${SCHOOL_IMG}/591c94bb434fd2eadbb6247f006e0d12.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.58 (1).jpeg`,
   },
   {
     title: 'Lycée',
@@ -47,7 +48,7 @@ const cycles = [
     accent: 'bg-accent-100 text-accent-700',
     desc: 'Préparation au Bac et orientation vers les meilleures universités.',
     to: '/cycles/lycee',
-    img: `${SCHOOL_IMG}/IMG_2855.jpg`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.24.05.jpeg`,
   },
 ]
 
@@ -74,7 +75,7 @@ const news = [
     color: 'bg-primary-500',
     title: 'Journée portes ouvertes le 12 avril',
     excerpt: 'Découvrez notre campus, rencontrez nos enseignants et posez toutes vos questions.',
-    img: `${SCHOOL_IMG}/2809d8359bb7a4d95c6852c400016c2a.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.08.10 (2).jpeg`,
   },
   {
     date: '08 Mars 2026',
@@ -82,15 +83,15 @@ const news = [
     color: 'bg-secondary-500',
     title: 'Nos élèves médaillés au concours national',
     excerpt: 'Trois élèves de Terminale ont brillé au concours national de mathématiques.',
-    img: `${SCHOOL_IMG}/7ddc45d0e792197d5c438ad71c14111f.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.33.20.jpeg`,
   },
   {
     date: '01 Mars 2026',
     category: 'International',
     color: 'bg-accent-400',
-    title: 'Voyage scolaire à Paris pour les 3ème',
+    title: 'Voyage scolaire à Londres pour les 3AC',
     excerpt: 'Une semaine culturelle au cœur de la capitale française.',
-    img: `${SCHOOL_IMG}/97879aef9e4cc080a09850909c8cc08e.JPG`,
+    img: `${WA_IMG}/WhatsApp Image 2026-05-10 at 22.35.58.jpeg`,
   },
 ]
 
@@ -125,52 +126,75 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              `linear-gradient(120deg, rgba(14,143,187,0.92) 0%, rgba(90,151,40,0.75) 60%, rgba(14,143,187,0.6) 100%), url(${SCHOOL_IMG}/IMG_2870.jpg)`,
-          }}
-        />
-        {/* Decorative blobs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-accent-300/20 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-blob" />
+      <section className="relative bg-primary-50 overflow-hidden">
+        {/* Decorative ribbons on far edges */}
+        <svg className="absolute left-0 top-0 h-full w-24 md:w-32 text-secondary-400/60 pointer-events-none" viewBox="0 0 100 600" preserveAspectRatio="none" fill="none">
+          <path d="M20 0 C 80 150, -20 300, 60 450, 30 550, 50 600" stroke="currentColor" strokeWidth="14" strokeLinecap="round" />
+          <path d="M60 0 C 0 150, 80 300, 20 450, 50 550, 30 600" stroke="#33c5f0" strokeOpacity="0.7" strokeWidth="14" strokeLinecap="round" />
+        </svg>
+        <svg className="absolute right-0 top-0 h-full w-24 md:w-32 text-secondary-400/60 pointer-events-none" viewBox="0 0 100 600" preserveAspectRatio="none" fill="none">
+          <path d="M80 0 C 20 150, 120 300, 40 450, 70 550, 50 600" stroke="currentColor" strokeWidth="14" strokeLinecap="round" />
+          <path d="M40 0 C 100 150, 20 300, 80 450, 50 550, 70 600" stroke="#33c5f0" strokeOpacity="0.7" strokeWidth="14" strokeLinecap="round" />
+        </svg>
 
-        <div className="container-custom relative z-10 text-white py-20">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent-300/30 border border-accent-300/50 rounded-full text-accent-100 text-sm mb-6 backdrop-blur">
-              <Sparkles size={14} /> Inscriptions ouvertes pour 2026 - 2027
+        {/* Vertical social icons */}
+        <div className="hidden lg:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 flex-col gap-2">
+          <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-md bg-[#1877F2] text-white flex items-center justify-center shadow-md hover:scale-110 transition">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-md bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white flex items-center justify-center shadow-md hover:scale-110 transition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" className="w-10 h-10 rounded-md bg-[#FF0000] text-white flex items-center justify-center shadow-md hover:scale-110 transition">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-md bg-[#0A66C2] text-white flex items-center justify-center shadow-md hover:scale-110 transition">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm6 0h3.8v1.6h.05A4.16 4.16 0 0 1 16.6 9.2c4.06 0 4.8 2.67 4.8 6.14V21h-4v-4.96c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21H9V9.5Z"/></svg>
+          </a>
+        </div>
+
+        <div className="container-custom relative z-10 py-16 md:py-24 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            {/* Left: stacked cycle titles + CTA */}
+            <div className="text-center lg:text-left">
+              <h1 className="font-display font-extrabold leading-[0.95] tracking-tight space-y-2 md:space-y-3">
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-900">MATERNELLE</span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-300">PRIMAIRE</span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-600">COLLÈGE</span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-secondary-500">LYCÉE</span>
+              </h1>
+              <div className="mt-10">
+                <Link
+                  to="/admissions"
+                  className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-display font-bold uppercase tracking-wide px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition"
+                >
+                  Inscriptions ouvertes <ArrowRight size={18} />
+                </Link>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-display font-extrabold leading-tight mb-6 drop-shadow-2xl">
-              L'excellence éducative,<br />
-              <span className="text-accent-300">pour vos enfants</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/95 mb-10 max-w-2xl leading-relaxed">
-              Jean Cocteau International School offre une éducation premium, multilingue et bienveillante,
-              de la maternelle au lycée, préparant chaque élève à devenir un citoyen du monde accompli.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/admissions" className="btn-accent">
-                Inscription en ligne <ArrowRight size={18} className="ml-2" />
-              </Link>
-              <Link to="/contact" className="btn-white">
-                <Calendar size={18} className="mr-2" /> Visiter le campus
-              </Link>
-              <button className="inline-flex items-center justify-center px-6 py-3 text-white font-semibold hover:text-accent-300 transition group">
-                <span className="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center mr-2 group-hover:bg-accent-300 group-hover:text-gray-900 transition">
-                  <Play size={14} className="ml-0.5" />
-                </span>
-                Voir la vidéo
-              </button>
+
+            {/* Right: cutout photo with blob shapes behind */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-[18rem] sm:w-[22rem] md:w-[26rem] lg:w-[30rem] aspect-square">
+                {/* Green blob */}
+                <div className="absolute inset-0 bg-secondary-400 -rotate-6 animate-blob" style={{ borderRadius: '42% 58% 55% 45% / 50% 45% 55% 50%' }} />
+                {/* Blue blob */}
+                <div className="absolute inset-2 sm:inset-4 bg-primary-300 rotate-3 animate-blob" style={{ borderRadius: '55% 45% 60% 40% / 45% 55% 45% 55%', animationDelay: '2s' }} />
+                {/* Photo */}
+                <img
+                  src={`${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.37 (3).jpeg`}
+                  alt="Élève souriant de Jean Cocteau"
+                  className="absolute inset-0 w-full h-full object-cover rounded-[42%_58%_55%_45%/50%_45%_55%_50%] shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Floating stat card */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 hidden md:block">
+        {/* Stats strip */}
+        <div className="relative z-10">
           <div className="container-custom">
-            <div className="bg-white/95 backdrop-blur shadow-2xl rounded-t-3xl grid grid-cols-4 divide-x divide-gray-100">
+            <div className="bg-white shadow-2xl rounded-3xl grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100 -mb-12 relative">
               {stats.map((s) => (
                 <div key={s.label} className="text-center py-6 px-4">
                   <div className={`text-3xl lg:text-4xl font-display font-extrabold ${s.color}`}>{s.value}</div>
@@ -180,6 +204,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="h-12" />
       </section>
 
       {/* Welcome / Présentation */}
@@ -190,7 +215,7 @@ export default function Home() {
         <div className="container-custom grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <div className="relative">
             <img
-              src={`${SCHOOL_IMG}/IMG_2339.jpg`}
+              src={`${WA_IMG}/WhatsApp Image 2026-05-10 at 22.07.58 (1).jpeg`}
               alt="Campus"
               className="rounded-3xl shadow-2xl"
             />
