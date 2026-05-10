@@ -2,6 +2,8 @@ import { Award, BookOpen, Heart, Target, Users, Eye, Compass, Building2 } from '
 import PageHeader from '../components/PageHeader'
 import CTASection from '../components/CTASection'
 
+const SCHOOL_IMG = '/School pictures/School pictures'
+
 const values = [
   { icon: Heart, title: 'Bienveillance', desc: 'Un cadre rassurant où chaque élève se sent écouté, respecté et soutenu.', color: 'primary' },
   { icon: Award, title: 'Excellence', desc: 'Une exigence académique élevée, sans jamais sacrifier l\'épanouissement.', color: 'secondary' },
@@ -10,13 +12,13 @@ const values = [
 ]
 
 const team = [
-  { name: 'Dr. Catherine Moreau', role: 'Directrice Générale', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80' },
-  { name: 'M. Hassan El Amrani', role: 'Directeur Pédagogique', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80' },
-  { name: 'Mme. Leila Benkirane', role: 'Directrice Maternelle & Primaire', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80' },
-  { name: 'M. Pierre Lefèvre', role: 'Directeur Collège & Lycée', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80' },
+  { name: 'Mme. Mériame Bouirig', role: 'Directrice Générale', img: `${SCHOOL_IMG}/IMG_2339.jpg` },
+  { name: 'M. Smail Sarab', role: 'Responsable Primaire', img: `${SCHOOL_IMG}/4f7ac21ba46d3e1cd623264946728653.JPG` },
+  { name: 'Mme. Wafaa Khalfi', role: 'Responsable Maternelle', img: `${SCHOOL_IMG}/0cf0007c031bed1200c44af205da4e1e_kid.JPG` },
+  { name: 'M. Driss Elgraini', role: 'Responsable Collège & Lycée', img: `${SCHOOL_IMG}/591c94bb434fd2eadbb6247f006e0d12.JPG` },
 ]
 
-const partners = ['AEFE', 'Cambridge', 'IB', 'Mission Laïque', 'Erasmus+', 'UNESCO']
+const partners = ['Cambridge']
 
 const colorMap = {
   primary: 'bg-primary-100 text-primary-500',
@@ -39,11 +41,11 @@ export default function About() {
           <div>
             <span className="text-primary-500 font-bold uppercase tracking-widest text-sm">Notre histoire</span>
             <h2 className="text-4xl md:text-5xl font-display font-extrabold text-gray-900 mt-3 mb-6">
-              25 ans d'<span className="text-gradient">excellence éducative</span>
+              10 ans d'<span className="text-gradient">excellence éducative</span>
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-primary-500 to-secondary-500 mb-6 rounded-full" />
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Fondée en 2001 par un groupe d'éducateurs visionnaires, Jean Cocteau International School
+              Fondée en 2019 par un groupe d'éducateurs visionnaires, Jean Cocteau International School
               est née d'une ambition : offrir une éducation de très haut niveau, alliant rigueur académique
               et ouverture sur le monde.
             </p>
@@ -52,13 +54,13 @@ export default function About() {
               s'enrichissant de partenariats prestigieux, d'enseignants passionnés et d'infrastructures modernes.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Aujourd'hui, plus de 1 500 élèves de toutes nationalités y construisent chaque jour leur avenir.
+              Aujourd'hui, plus de 1 700 élèves construisent leur avenir chaque jour.
             </p>
           </div>
           <div className="relative">
-            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=900&q=80" alt="Campus" className="rounded-3xl shadow-2xl" />
+            <img src={`${SCHOOL_IMG}/IMG_2870.jpg`} alt="Campus" className="rounded-3xl shadow-2xl" />
             <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary-500 to-secondary-500 text-white p-6 rounded-2xl shadow-xl">
-              <div className="text-3xl font-display font-extrabold text-accent-300">2001</div>
+              <div className="text-3xl font-display font-extrabold text-accent-300">2019</div>
               <div className="text-sm">Année de fondation</div>
             </div>
           </div>
@@ -69,8 +71,8 @@ export default function About() {
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-custom grid md:grid-cols-2 gap-8">
           {[
-            { icon: Eye, title: 'Notre vision', text: 'Former des citoyens du monde curieux, responsables et accomplis, capables de relever les défis du XXIᵉ siècle avec confiance et créativité.', color: 'from-primary-500 to-primary-600' },
-            { icon: Target, title: 'Notre mission', text: 'Offrir à chaque élève une éducation premium, multilingue et bienveillante, qui développe son potentiel académique, humain et culturel.', color: 'from-secondary-500 to-secondary-600' },
+            { icon: Eye, title: 'Notre vision', text: 'Éveiller des esprits curieux et responsables, prêts à construire l\'avenir avec créativité et confiance, tout en cultivant un fort attachement aux valeurs de leur société.', color: 'from-primary-500 to-primary-600' },
+            { icon: Target, title: 'Notre mission', text: 'Offrir à chaque élève une éducation d\'excellence, multilingue et bienveillante, qui développe pleinement son potentiel académique, humain et culturel.', color: 'from-secondary-500 to-secondary-600' },
           ].map((b) => (
             <div key={b.title} className="bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl transition">
               <div className={`w-16 h-16 bg-gradient-to-br ${b.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
@@ -111,7 +113,7 @@ export default function About() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
         <div className="container-custom grid lg:grid-cols-3 gap-12 items-center relative z-10">
           <div className="lg:col-span-1">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Direction" className="rounded-3xl shadow-2xl" />
+            <img src={`${SCHOOL_IMG}/IMG_2339.jpg`} alt="Direction" className="rounded-3xl shadow-2xl" />
           </div>
           <div className="lg:col-span-2">
             <span className="text-accent-300 font-bold uppercase tracking-widest text-sm">Mot de la direction</span>
@@ -126,7 +128,7 @@ export default function About() {
               et où chaque élève trouve sa voie.
             </p>
             <div>
-              <div className="font-display font-bold text-xl">Dr. Catherine Moreau</div>
+              <div className="font-display font-bold text-xl">Mme. Mériame Bouirig</div>
               <div className="text-accent-300">Directrice Générale</div>
             </div>
           </div>
@@ -166,9 +168,9 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Salles modernes', desc: '60 salles équipées de tableaux interactifs et matériel pédagogique de pointe.', img: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&q=80' },
-              { title: 'Centre sportif', desc: 'Gymnase, terrains, piscine et espaces dédiés au sport et au bien-être.', img: 'https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=800&q=80' },
-              { title: 'Laboratoires & arts', desc: 'Laboratoires sciences, salles de musique, arts plastiques et théâtre.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80' },
+              { title: 'Salles modernes', desc: '60 salles équipées de tableaux interactifs et matériel pédagogique de pointe.', img: `${SCHOOL_IMG}/4c5739e6-941a-412f-b55f-b6af3476b11a.JPG` },
+              { title: 'Centre sportif', desc: 'Gymnase, terrains, piscine et espaces dédiés au sport et au bien-être.', img: `${SCHOOL_IMG}/2809d8359bb7a4d95c6852c400016c2a.JPG` },
+              { title: 'Laboratoires & arts', desc: 'Laboratoires sciences, salles de musique, arts plastiques et théâtre.', img: `${SCHOOL_IMG}/6ff70d50-c633-4305-a0bb-2eb265b15ceb.JPG` },
             ].map((c) => (
               <div key={c.title} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
                 <div className="h-56 overflow-hidden">

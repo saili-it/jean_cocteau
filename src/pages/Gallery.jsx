@@ -2,21 +2,24 @@ import { useState } from 'react'
 import { X } from 'lucide-react'
 import PageHeader from '../components/PageHeader'
 
+const SCHOOL_IMG = '/School pictures/School pictures'
+
 const tabs = ['Tout', 'Campus', 'Classes', 'Activités', 'Événements']
 
 const images = [
-  { src: 'https://images.unsplash.com/photo-1562774053-701939374585?w=900&q=80', cat: 'Campus' },
-  { src: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=900&q=80', cat: 'Classes' },
-  { src: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=900&q=80', cat: 'Activités' },
-  { src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=900&q=80', cat: 'Événements' },
-  { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=80', cat: 'Classes' },
-  { src: 'https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=900&q=80', cat: 'Activités' },
-  { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80', cat: 'Campus' },
-  { src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=900&q=80', cat: 'Événements' },
-  { src: 'https://images.unsplash.com/photo-1581726690015-c9861fa5057f?w=900&q=80', cat: 'Activités' },
-  { src: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=900&q=80', cat: 'Classes' },
-  { src: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=900&q=80', cat: 'Campus' },
-  { src: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&q=80', cat: 'Événements' },
+  { src: `${SCHOOL_IMG}/IMG_2870.jpg`, cat: 'Campus' },
+  { src: `${SCHOOL_IMG}/4f7ac21ba46d3e1cd623264946728653.JPG`, cat: 'Classes' },
+  { src: `${SCHOOL_IMG}/4c5739e6-941a-412f-b55f-b6af3476b11a.JPG`, cat: 'Activités' },
+  { src: `${SCHOOL_IMG}/2809d8359bb7a4d95c6852c400016c2a.JPG`, cat: 'Événements' },
+  { src: `${SCHOOL_IMG}/591c94bb434fd2eadbb6247f006e0d12.JPG`, cat: 'Classes' },
+  { src: `${SCHOOL_IMG}/6ff70d50-c633-4305-a0bb-2eb265b15ceb.JPG`, cat: 'Activités' },
+  { src: `${SCHOOL_IMG}/IMG_2339.jpg`, cat: 'Campus' },
+  { src: `${SCHOOL_IMG}/97879aef9e4cc080a09850909c8cc08e.JPG`, cat: 'Événements' },
+  { src: `${SCHOOL_IMG}/10430f4a-f614-4a81-a06c-84b35cc6052f.JPG`, cat: 'Activités' },
+  { src: `${SCHOOL_IMG}/0cf0007c031bed1200c44af205da4e1e_kid.JPG`, cat: 'Classes' },
+  { src: `${SCHOOL_IMG}/IMG_2855.jpg`, cat: 'Campus' },
+  { src: `${SCHOOL_IMG}/7ddc45d0e792197d5c438ad71c14111f.JPG`, cat: 'Événements' },
+  { src: `${SCHOOL_IMG}/acba1ade9df557f417091a198dbdb127.JPG`, cat: 'Activités' },
 ]
 
 export default function Gallery() {

@@ -35,7 +35,7 @@ const groups = [
     title: 'Frais & paiement',
     color: 'primary',
     questions: [
-      { q: 'Quels sont les frais de scolarité ?', a: 'Les frais varient selon le cycle, de 45 000 MAD/an en maternelle à 75 000 MAD/an au lycée. Tous les détails sur la page Admissions.' },
+      { q: 'Quels sont les frais de scolarité ?', a: 'Les frais varient selon le cycle, de 12 000 MAD/an en maternelle à 18 000 MAD/an au lycée. Tous les détails sur la page Admissions.' },
       { q: 'Proposez-vous des bourses ?', a: 'Oui, nous proposons des bourses au mérite et des aides sociales étudiées au cas par cas.' },
       { q: 'Quelles sont les modalités de paiement ?', a: 'Paiement annuel, trimestriel ou mensuel possible. Facilités de paiement disponibles sur étude.' },
     ],

@@ -35,12 +35,12 @@ export default function Footer() {
           </p>
           <div className="flex gap-2">
             {[
-              { Icon: Facebook, color: 'hover:bg-primary-500' },
-              { Icon: Instagram, color: 'hover:bg-secondary-500' },
-              { Icon: Linkedin, color: 'hover:bg-primary-500' },
-              { Icon: Youtube, color: 'hover:bg-secondary-500' },
-            ].map(({ Icon, color }, i) => (
-              <a key={i} href="#" className={`w-9 h-9 rounded-full bg-gray-800 ${color} flex items-center justify-center transition`}>
+              { Icon: Facebook, color: 'hover:bg-primary-500', href: 'https://www.facebook.com/share/1RtAHzqLxd/?mibextid=wwXIfr' },
+              { Icon: Instagram, color: 'hover:bg-secondary-500', href: 'https://www.instagram.com/jeancocteau_international?igsh=bTJieWU1aGJoa3g1' },
+              { Icon: Linkedin, color: 'hover:bg-primary-500', href: '#' },
+              { Icon: Youtube, color: 'hover:bg-secondary-500', href: '#' },
+            ].map(({ Icon, color, href }, i) => (
+              <a key={i} href={href} target="_blank" rel="noreferrer" className={`w-9 h-9 rounded-full bg-gray-800 ${color} flex items-center justify-center transition`}>
                 <Icon size={16} />
               </a>
             ))}
@@ -105,15 +105,15 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-gray-400">
             <li className="flex gap-3">
               <MapPin size={18} className="text-accent-300 shrink-0 mt-0.5" />
-              <span>Avenue de l'Excellence<br />Casablanca, Maroc</span>
+              <a href="https://maps.app.goo.gl/3PyRtUJFrv6NvJtk8?g_st=ic" target="_blank" rel="noreferrer" className="hover:text-accent-300">Sidi Moumen, Attacharouk<br />Casablanca, Maroc</a>
             </li>
             <li className="flex gap-3">
               <Phone size={18} className="text-accent-300 shrink-0 mt-0.5" />
-              <a href="tel:+212500000000" className="hover:text-accent-300">+212 5 00 00 00 00</a>
+              <a href="tel:+212522728868" className="hover:text-accent-300">+212 522-728868</a>
             </li>
             <li className="flex gap-3">
               <Mail size={18} className="text-accent-300 shrink-0 mt-0.5" />
-              <a href="mailto:contact@jeancocteau-school.com" className="hover:text-accent-300 break-all">contact@jeancocteau-school.com</a>
+              <a href="mailto:gsjeancocteau@gmail.com" className="hover:text-accent-300 break-all">gsjeancocteau@gmail.com</a>
             </li>
           </ul>
         </div>

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Calendar, ArrowRight } from 'lucide-react'
 import PageHeader from '../components/PageHeader'
 
+const SCHOOL_IMG = '/School pictures/School pictures'
+
 const categories = ['Tous', 'Événement', 'Réussite', 'International', 'Pédagogie']
 
 const categoryColors = {
@@ -12,12 +14,12 @@ const categoryColors = {
 }
 
 const articles = [
-  { date: '15 Mars 2026', category: 'Événement', title: 'Journée portes ouvertes le 12 avril', excerpt: 'Découvrez notre campus, rencontrez nos enseignants et posez vos questions.', img: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80' },
-  { date: '08 Mars 2026', category: 'Réussite', title: 'Nos élèves médaillés au concours national de mathématiques', excerpt: 'Trois élèves de Terminale ont brillé dans cette compétition prestigieuse.', img: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80' },
-  { date: '01 Mars 2026', category: 'International', title: 'Voyage scolaire à Paris pour les classes de 3ème', excerpt: 'Une semaine culturelle au cœur de la capitale française.', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80' },
-  { date: '20 Février 2026', category: 'Pédagogie', title: 'Lancement du programme STEAM en primaire', excerpt: 'Sciences, technologie, ingénierie, arts et mathématiques au programme.', img: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&q=80' },
-  { date: '10 Février 2026', category: 'Événement', title: 'Concert de la chorale du lycée', excerpt: 'Une soirée musicale exceptionnelle ouverte aux familles.', img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80' },
-  { date: '01 Février 2026', category: 'Réussite', title: 'Notre équipe robotique qualifiée pour la finale internationale', excerpt: 'Les élèves du club robotique se sont distingués lors des sélections régionales.', img: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&q=80' },
+  { date: '10 Aout 2026', category: 'Événement', title: 'Journée portes ouvertes le 10 Aout', excerpt: 'Découvrez notre campus, rencontrez nos enseignants et posez vos questions.', img: `${SCHOOL_IMG}/2809d8359bb7a4d95c6852c400016c2a.JPG` },
+  { date: '08 Mars 2026', category: 'Réussite', title: 'Concours national de mathématiques', excerpt: 'Trois élèves de Terminale ont brillé dans cette compétition prestigieuse.', img: `${SCHOOL_IMG}/IMG_2855.jpg` },
+  { date: '01 Mars 2026', category: 'International', title: 'Voyage scolaire à Londres pour collégiens et lycéens', excerpt: 'Une semaine culturelle au cœur de Londres.', img: `${SCHOOL_IMG}/97879aef9e4cc080a09850909c8cc08e.JPG` },
+  { date: '20 Septembre 2026', category: 'Pédagogie', title: 'Lancement du programme STEAM en primaire', excerpt: 'Sciences, technologie, ingénierie, arts et mathématiques au programme.', img: `${SCHOOL_IMG}/7ddc45d0e792197d5c438ad71c14111f.JPG` },
+  { date: '10 Février 2026', category: 'Événement', title: 'Concert de la chorale du lycée', excerpt: 'Une soirée musicale exceptionnelle ouverte aux familles.', img: `${SCHOOL_IMG}/6ff70d50-c633-4305-a0bb-2eb265b15ceb.JPG` },
+  { date: '01 Février 2026', category: 'Réussite', title: 'Notre équipe robotique qualifiée pour FLL', excerpt: 'Les élèves du club robotique se sont distingués lors des sélections régionales.', img: `${SCHOOL_IMG}/4c5739e6-941a-412f-b55f-b6af3476b11a.JPG` },
 ]
 
 export default function News() {

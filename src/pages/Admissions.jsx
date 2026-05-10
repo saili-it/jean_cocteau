@@ -3,7 +3,7 @@ import { FileText, ClipboardCheck, MessageCircle, CheckCircle2, Download, Chevro
 import PageHeader from '../components/PageHeader'
 
 const steps = [
-  { icon: FileText, title: 'Demande en ligne', desc: 'Remplissez notre formulaire de préinscription en quelques minutes.', color: 'primary' },
+  { icon: FileText, title: 'Demande en ligne ou en présentiel', desc: 'Remplissez notre formulaire de préinscription en quelques minutes.', color: 'primary' },
   { icon: MessageCircle, title: 'Entretien', desc: 'Rencontre avec notre équipe pédagogique et l\'élève.', color: 'secondary' },
   { icon: ClipboardCheck, title: 'Tests d\'admission', desc: 'Évaluation adaptée au niveau et à l\'âge de l\'enfant.', color: 'accent' },
   { icon: CheckCircle2, title: 'Confirmation', desc: 'Réponse sous 7 jours ouvrés et finalisation du dossier.', color: 'primary' },
@@ -22,14 +22,13 @@ const documents = [
   'Certificat médical récent',
   '4 photos d\'identité récentes',
   'Pièce d\'identité des parents',
-  'Justificatif de domicile',
 ]
 
 const fees = [
-  { cycle: 'Maternelle', annual: '45 000 MAD', monthly: '4 500 MAD' },
-  { cycle: 'Primaire', annual: '55 000 MAD', monthly: '5 500 MAD' },
-  { cycle: 'Collège', annual: '65 000 MAD', monthly: '6 500 MAD' },
-  { cycle: 'Lycée', annual: '75 000 MAD', monthly: '7 500 MAD' },
+  { cycle: 'Maternelle', annual: '12 000 MAD', monthly: '1 200 MAD' },
+  { cycle: 'Primaire', annual: '14 000 MAD', monthly: '1 400 MAD' },
+  { cycle: 'Collège', annual: '15 000 MAD', monthly: '1 500 MAD' },
+  { cycle: 'Lycée', annual: '18 000 MAD', monthly: '1 800 MAD' },
 ]
 
 const faqs = [
@@ -95,7 +94,7 @@ export default function Admissions() {
           <div className="bg-white p-10 rounded-3xl shadow-lg">
             <h3 className="text-3xl font-display font-extrabold text-gray-900 mb-2">Frais de scolarité</h3>
             <div className="w-16 h-1.5 bg-gradient-to-r from-primary-500 to-secondary-500 mb-6 rounded-full" />
-            <p className="text-gray-600 text-sm mb-6">Tarifs 2026-2027, hors frais d'inscription (3 000 MAD).</p>
+            <p className="text-gray-600 text-sm mb-6">Tarifs 2026-2027, hors frais d'inscription (1 500 MAD).</p>
             <div className="overflow-hidden rounded-2xl border border-gray-100">
               <table className="w-full text-sm">
                 <thead className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white">

@@ -6,6 +6,8 @@ import {
 } from 'lucide-react'
 import CTASection from '../components/CTASection'
 
+const SCHOOL_IMG = '/School pictures/School pictures'
+
 const cycles = [
   {
     title: 'Maternelle',
@@ -15,7 +17,7 @@ const cycles = [
     accent: 'bg-pink-100 text-pink-600',
     desc: 'Éveil, créativité et premières découvertes dans un environnement bienveillant.',
     to: '/cycles/maternelle',
-    img: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80',
+    img: `${SCHOOL_IMG}/0cf0007c031bed1200c44af205da4e1e_kid.JPG`,
   },
   {
     title: 'Primaire',
@@ -25,7 +27,7 @@ const cycles = [
     accent: 'bg-primary-100 text-primary-600',
     desc: 'Apprentissages fondamentaux et ouverture sur le monde et les langues.',
     to: '/cycles/primaire',
-    img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80',
+    img: `${SCHOOL_IMG}/4f7ac21ba46d3e1cd623264946728653.JPG`,
   },
   {
     title: 'Collège',
@@ -35,7 +37,7 @@ const cycles = [
     accent: 'bg-secondary-100 text-secondary-700',
     desc: 'Approfondissement des connaissances et développement de l\'autonomie.',
     to: '/cycles/college',
-    img: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80',
+    img: `${SCHOOL_IMG}/591c94bb434fd2eadbb6247f006e0d12.JPG`,
   },
   {
     title: 'Lycée',
@@ -45,7 +47,7 @@ const cycles = [
     accent: 'bg-accent-100 text-accent-700',
     desc: 'Préparation au Bac et orientation vers les meilleures universités.',
     to: '/cycles/lycee',
-    img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80',
+    img: `${SCHOOL_IMG}/IMG_2855.jpg`,
   },
 ]
 
@@ -59,8 +61,8 @@ const features = [
 ]
 
 const stats = [
-  { value: '1500+', label: 'Élèves', color: 'text-primary-500' },
-  { value: '120+', label: 'Enseignants experts', color: 'text-secondary-500' },
+  { value: '1700+', label: 'Élèves', color: 'text-primary-500' },
+  { value: '150+', label: 'Enseignants experts', color: 'text-secondary-500' },
   { value: '98%', label: 'Réussite au Bac', color: 'text-accent-500' },
   { value: '3', label: 'Langues principales', color: 'text-primary-500' },
 ]
@@ -72,7 +74,7 @@ const news = [
     color: 'bg-primary-500',
     title: 'Journée portes ouvertes le 12 avril',
     excerpt: 'Découvrez notre campus, rencontrez nos enseignants et posez toutes vos questions.',
-    img: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80',
+    img: `${SCHOOL_IMG}/2809d8359bb7a4d95c6852c400016c2a.JPG`,
   },
   {
     date: '08 Mars 2026',
@@ -80,7 +82,7 @@ const news = [
     color: 'bg-secondary-500',
     title: 'Nos élèves médaillés au concours national',
     excerpt: 'Trois élèves de Terminale ont brillé au concours national de mathématiques.',
-    img: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80',
+    img: `${SCHOOL_IMG}/7ddc45d0e792197d5c438ad71c14111f.JPG`,
   },
   {
     date: '01 Mars 2026',
@@ -88,7 +90,7 @@ const news = [
     color: 'bg-accent-400',
     title: 'Voyage scolaire à Paris pour les 3ème',
     excerpt: 'Une semaine culturelle au cœur de la capitale française.',
-    img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80',
+    img: `${SCHOOL_IMG}/97879aef9e4cc080a09850909c8cc08e.JPG`,
   },
 ]
 
@@ -128,7 +130,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'linear-gradient(120deg, rgba(14,143,187,0.92) 0%, rgba(90,151,40,0.75) 60%, rgba(14,143,187,0.6) 100%), url(https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1920&q=80)',
+              `linear-gradient(120deg, rgba(14,143,187,0.92) 0%, rgba(90,151,40,0.75) 60%, rgba(14,143,187,0.6) 100%), url(${SCHOOL_IMG}/IMG_2870.jpg)`,
           }}
         />
         {/* Decorative blobs */}
@@ -188,19 +190,19 @@ export default function Home() {
         <div className="container-custom grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80"
+              src={`${SCHOOL_IMG}/IMG_2339.jpg`}
               alt="Campus"
               className="rounded-3xl shadow-2xl"
             />
             <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-accent-300 to-accent-500 text-gray-900 p-6 rounded-2xl shadow-xl hidden md:block">
-              <div className="text-4xl font-display font-extrabold">25+</div>
+              <div className="text-4xl font-display font-extrabold">10+</div>
               <div className="text-sm font-semibold">Années d'excellence</div>
             </div>
             <div className="absolute -top-8 -left-8 bg-white p-5 rounded-2xl shadow-xl hidden md:flex items-center gap-3 border-2 border-primary-100">
               <Award className="text-secondary-500" size={28} />
               <div>
                 <div className="text-xs text-gray-500">Certifié</div>
-                <div className="font-display font-bold text-gray-900">AEFE</div>
+                <div className="font-display font-bold text-gray-900">Cambridge</div>
               </div>
             </div>
           </div>
@@ -211,7 +213,7 @@ export default function Home() {
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-primary-500 to-secondary-500 mb-6 rounded-full" />
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Depuis plus de 25 ans, Jean Cocteau International School accompagne les familles
+              Depuis plus de 10 ans, Jean Cocteau International School accompagne les familles
               dans l'éducation de leurs enfants. Notre pédagogie allie rigueur académique,
               ouverture culturelle et bienveillance.
             </p>

@@ -40,11 +40,11 @@ export default function Navbar() {
       <div className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white text-xs hidden md:block">
         <div className="container-custom flex justify-between items-center py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:+212500000000" className="flex items-center gap-1.5 hover:text-accent-300 transition">
-              <Phone size={12} /> +212 5 00 00 00 00
+            <a href="tel:+212522728868" className="flex items-center gap-1.5 hover:text-accent-300 transition">
+              <Phone size={12} /> +212 522-728868
             </a>
-            <a href="mailto:contact@jeancocteau-school.com" className="flex items-center gap-1.5 hover:text-accent-300 transition">
-              <Mail size={12} /> contact@jeancocteau-school.com
+            <a href="mailto:gsjeancocteau@gmail.com" className="flex items-center gap-1.5 hover:text-accent-300 transition">
+              <Mail size={12} /> gsjeancocteau@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-4">

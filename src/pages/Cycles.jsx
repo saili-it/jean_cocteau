@@ -3,6 +3,8 @@ import { ArrowRight, Sparkles, BookOpen, GraduationCap, Trophy } from 'lucide-re
 import PageHeader from '../components/PageHeader'
 import CTASection from '../components/CTASection'
 
+const SCHOOL_IMG = '/School pictures/School pictures'
+
 const cycles = [
   {
     title: 'Maternelle',
@@ -11,7 +13,7 @@ const cycles = [
     color: 'pink',
     desc: 'Un environnement sécurisant pour les premiers pas dans l\'apprentissage. Éveil sensoriel, créativité, motricité, langages.',
     bullets: ['Pédagogie active', 'Bilingue dès la PS', 'Petits effectifs', 'Activités artistiques'],
-    img: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=900&q=80',
+    img: `${SCHOOL_IMG}/0cf0007c031bed1200c44af205da4e1e_kid.JPG`,
     to: '/cycles/maternelle',
   },
   {
@@ -21,7 +23,7 @@ const cycles = [
     color: 'primary',
     desc: 'Acquisition des fondamentaux dans un cadre stimulant. Lecture, mathématiques, sciences, langues et culture.',
     bullets: ['Programme français', 'Anglais quotidien', 'Sciences expérimentales', 'Activités sportives'],
-    img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=80',
+    img: `${SCHOOL_IMG}/4f7ac21ba46d3e1cd623264946728653.JPG`,
     to: '/cycles/primaire',
   },
   {
@@ -31,7 +33,7 @@ const cycles = [
     color: 'secondary',
     desc: 'Approfondissement et autonomie. Développement de l\'esprit critique, projets pluridisciplinaires et orientation.',
     bullets: ['Préparation Brevet', 'Sections internationales', 'Projets innovants', 'Orientation guidée'],
-    img: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=900&q=80',
+    img: `${SCHOOL_IMG}/591c94bb434fd2eadbb6247f006e0d12.JPG`,
     to: '/cycles/college',
   },
   {
@@ -41,7 +43,7 @@ const cycles = [
     color: 'accent',
     desc: 'Préparation au Bac et à l\'enseignement supérieur. Spécialités, orientation et accompagnement personnalisé.',
     bullets: ['Bac français', 'Bac international', 'Préparation universitaire', 'Mentorat'],
-    img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900&q=80',
+    img: `${SCHOOL_IMG}/IMG_2855.jpg`,
     to: '/cycles/lycee',
   },
 ]

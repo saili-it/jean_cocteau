@@ -1,14 +1,15 @@
-import { Music, Trophy, Palette, Bus, Utensils, Shield, Users, Globe } from 'lucide-react'
+import { Music, Trophy, Palette, Bus, Utensils, Shield, Users, Cog } from 'lucide-react'
 import PageHeader from '../components/PageHeader'
 import CTASection from '../components/CTASection'
+
+const SCHOOL_IMG = '/School pictures/School pictures'
 
 const clubs = [
   { icon: Music, name: 'Musique', desc: 'Chorale, orchestre, piano, guitare et percussions.', color: 'primary' },
   { icon: Palette, name: 'Arts plastiques', desc: 'Peinture, sculpture, photographie et arts numériques.', color: 'secondary' },
   { icon: Trophy, name: 'Sports', desc: 'Football, basket, natation, tennis, échecs, judo.', color: 'accent' },
-  { icon: Globe, name: 'MUN & débat', desc: 'Modèle ONU, club de débat et éloquence.', color: 'primary' },
   { icon: Users, name: 'Théâtre', desc: 'Atelier théâtre français, anglais et arabe.', color: 'secondary' },
-  { icon: Music, name: 'Robotique', desc: 'Programmation, électronique et compétitions FLL.', color: 'accent' },
+  { icon: Cog, name: 'Robotique', desc: 'Programmation, électronique et compétitions FLL.', color: 'accent' },
 ]
 
 const clubColors = {
@@ -18,15 +19,15 @@ const clubColors = {
 }
 
 const events = [
-  { date: '12 Avril', title: 'Journée portes ouvertes', img: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80' },
-  { date: '25 Mai', title: 'Gala annuel des arts', img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80' },
-  { date: '10 Juin', title: 'Tournoi sportif inter-classes', img: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80' },
-  { date: '20 Juin', title: 'Cérémonie de fin d\'année', img: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80' },
+  { date: '12 Avril', title: 'Journée portes ouvertes', img: `${SCHOOL_IMG}/2809d8359bb7a4d95c6852c400016c2a.JPG` },
+  { date: '25 Mai', title: 'Gala annuel des arts', img: `${SCHOOL_IMG}/6ff70d50-c633-4305-a0bb-2eb265b15ceb.JPG` },
+  { date: '10 Juin', title: 'Tournoi sportif inter-classes', img: `${SCHOOL_IMG}/4c5739e6-941a-412f-b55f-b6af3476b11a.JPG` },
+  { date: '20 Juin', title: 'Cérémonie de fin d\'année', img: `${SCHOOL_IMG}/IMG_2870.jpg` },
 ]
 
 const services = [
-  { icon: Utensils, title: 'Cantine', desc: 'Cuisine maison, bio et équilibrée préparée chaque jour sur place. Menus variés, options végétariennes et halal.', gradient: 'from-primary-500 to-primary-600' },
-  { icon: Bus, title: 'Transport scolaire', desc: 'Service de bus dans toutes les zones de la ville. Accompagnateurs à bord, horaires fiables, suivi GPS.', gradient: 'from-secondary-500 to-secondary-600' },
+  { icon: Utensils, title: 'Cantine', desc: 'Cuisine maison, équilibrée préparée chaque jour sur place. Menus variés.', gradient: 'from-primary-500 to-primary-600' },
+  { icon: Bus, title: 'Transport scolaire', desc: 'Service de bus dans toutes les zones de la ville. Accompagnateurs à bord, horaires fiables.', gradient: 'from-secondary-500 to-secondary-600' },
   { icon: Shield, title: 'Sécurité', desc: 'Campus surveillé 24/7, contrôle d\'accès, vidéosurveillance, infirmière sur place et plan d\'urgence.', gradient: 'from-accent-300 to-accent-500' },
 ]
 
@@ -37,7 +38,7 @@ export default function SchoolLife() {
         title="Vie scolaire"
         subtitle="Une école qui ne se limite pas aux salles de classe : clubs, événements, sport, arts et bien plus."
         breadcrumbs={[{ label: 'Vie scolaire' }]}
-        image="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1600&q=80"
+        image={`${SCHOOL_IMG}/4c5739e6-941a-412f-b55f-b6af3476b11a.JPG`}
       />
 
       {/* Clubs */}
@@ -115,7 +116,7 @@ export default function SchoolLife() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
         <div className="container-custom grid md:grid-cols-2 gap-10 relative z-10">
           <div className="relative h-80 rounded-3xl overflow-hidden group shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200&q=80" alt="Sports" className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+            <img src={`${SCHOOL_IMG}/4c5739e6-941a-412f-b55f-b6af3476b11a.JPG`} alt="Sports" className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
             <div className="absolute bottom-6 left-6">
               <Trophy size={32} className="text-accent-300 mb-2" />
@@ -124,7 +125,7 @@ export default function SchoolLife() {
             </div>
           </div>
           <div className="relative h-80 rounded-3xl overflow-hidden group shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80" alt="Arts" className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+            <img src={`${SCHOOL_IMG}/6ff70d50-c633-4305-a0bb-2eb265b15ceb.JPG`} alt="Arts" className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
             <div className="absolute bottom-6 left-6">
               <Palette size={32} className="text-accent-300 mb-2" />

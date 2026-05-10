@@ -46,7 +46,7 @@ export default function Careers() {
               ))}
             </ul>
           </div>
-          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&q=80" alt="Équipe" className="rounded-3xl shadow-2xl" />
+          <img src="/School pictures/School pictures/IMG_2339.jpg" alt="Équipe" className="rounded-3xl shadow-2xl" />
         </div>
       </section>
 
@@ -98,7 +98,7 @@ export default function Careers() {
           <p className="text-gray-600 mb-8">
             Vous ne trouvez pas l'offre qui vous correspond ? Envoyez-nous votre candidature spontanée.
           </p>
-          <a href="mailto:rh@jeancocteau-school.com" className="btn-primary">
+          <a href="mailto:gsjeancocteau@gmail.com" className="btn-primary">
             Envoyer mon CV <ArrowRight size={18} className="ml-2" />
           </a>
         </div>

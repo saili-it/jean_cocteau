@@ -3,9 +3,9 @@ import { MapPin, Phone, Mail, Clock, CheckCircle2, Facebook, Instagram, Linkedin
 import PageHeader from '../components/PageHeader'
 
 const info = [
-  { icon: MapPin, title: 'Adresse', lines: ['Avenue de l\'Excellence', 'Casablanca, 20100, Maroc'], gradient: 'from-primary-500 to-primary-600' },
-  { icon: Phone, title: 'Téléphone', lines: ['+212 5 00 00 00 00', '+212 6 00 00 00 00'], gradient: 'from-secondary-500 to-secondary-600' },
-  { icon: Mail, title: 'Email', lines: ['contact@jeancocteau-school.com', 'admissions@jeancocteau-school.com'], gradient: 'from-accent-300 to-accent-500' },
+  { icon: MapPin, title: 'Adresse', lines: ['Sidi Moumen, Attacharouk', 'Casablanca, 20100, Maroc'], gradient: 'from-primary-500 to-primary-600' },
+  { icon: Phone, title: 'Téléphone', lines: ['+212 522-728868', '+212 669-717478'], gradient: 'from-secondary-500 to-secondary-600' },
+  { icon: Mail, title: 'Email', lines: ['gsjeancocteau@gmail.com'], gradient: 'from-accent-300 to-accent-500' },
   { icon: Clock, title: 'Horaires', lines: ['Lun - Ven : 8h - 18h', 'Sam : 9h - 12h'], gradient: 'from-pink-400 to-pink-500' },
 ]
 
@@ -76,11 +76,11 @@ export default function Contact() {
             <div className="flex items-center gap-3 mt-8">
               <span className="text-sm text-gray-600 font-semibold">Suivez-nous :</span>
               {[
-                { Icon: Facebook, hover: 'hover:bg-primary-500' },
-                { Icon: Instagram, hover: 'hover:bg-secondary-500' },
-                { Icon: Linkedin, hover: 'hover:bg-primary-500' },
-              ].map(({ Icon, hover }, i) => (
-                <a key={i} href="#" className={`w-10 h-10 rounded-full bg-gray-100 ${hover} hover:text-white text-gray-700 flex items-center justify-center transition`}>
+                { Icon: Facebook, hover: 'hover:bg-primary-500', href: 'https://www.facebook.com/share/1RtAHzqLxd/?mibextid=wwXIfr' },
+                { Icon: Instagram, hover: 'hover:bg-secondary-500', href: 'https://www.instagram.com/jeancocteau_international?igsh=bTJieWU1aGJoa3g1' },
+                { Icon: Linkedin, hover: 'hover:bg-primary-500', href: '#' },
+              ].map(({ Icon, hover, href }, i) => (
+                <a key={i} href={href} target="_blank" rel="noreferrer" className={`w-10 h-10 rounded-full bg-gray-100 ${hover} hover:text-white text-gray-700 flex items-center justify-center transition`}>
                   <Icon size={16} />
                 </a>
               ))}
@@ -96,7 +96,7 @@ export default function Contact() {
             <div className="rounded-3xl overflow-hidden shadow-xl h-[460px] border-2 border-gray-100">
               <iframe
                 title="Carte"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106496.18036725075!2d-7.6837!3d33.5731104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca!5e0!3m2!1sfr!2sma!4v1700000000000"
+                src="https://www.google.com/maps?q=Jean+Cocteau+international+school,Casablanca&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
